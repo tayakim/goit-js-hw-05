@@ -11,9 +11,10 @@ class Storage {
 
     }
     removeItem(item) {
-        let delItem = this.items.splice(this.items.indexOf(item), 1);
-        return delItem;
-
+        if ((this.items).includes(item)) {
+            let delItem = this.items.splice(this.items.indexOf(item), 1);
+            return delItem;
+        }
     }
 }
 
